@@ -1,29 +1,15 @@
-import React from "react";
-import ProfileCard from "./component/ProfileCard";
-
+import React from 'react';
+import ProductCard from './component/ProductCard';
 
 const App = () => {
   return (
-    <div className="App">
-      <h1>Profile Cards</h1>
-      {/* Passing props to the ProfileCard component */}
-      <ProfileCard 
-        name="Fahad" 
-        age={30} 
-        occupation="Engineer" 
-        location="New York" 
-      />
-      <ProfileCard 
-        name="Sarah" 
-        age={25} 
-        occupation="Designer" 
-        location="London" 
-      />
-      <ProfileCard 
-        name="John" 
-        age={35} 
-        occupation="Doctor" 
-        location="Sydney" 
+    <div>
+      <h1>Product Showcase</h1>
+      <ProductCard 
+        title="Wireless Headphones"
+        description="Noise-cancelling, over-ear headphones"
+        price={199.99}
+        imageUrl="https://example.com/headphones.jpg"
       />
     </div>
   );
