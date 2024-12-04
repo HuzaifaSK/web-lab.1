@@ -1,0 +1,128 @@
+/* General Styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Dashboard Layout */
+.dashboard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  padding: 40px;
+  max-width: 1200px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+}
+
+/* Card Styling */
+.user-info-card,
+.statistics-card,
+.messages-card,
+.task-tracker-card,
+.activity-logs-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.user-info-card:hover,
+.statistics-card:hover,
+.messages-card:hover,
+.task-tracker-card:hover,
+.activity-logs-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 198, 255, 0.6);
+}
+
+/* Profile Image */
+.user-info-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  border: 5px solid transparent;
+  background: linear-gradient(90deg, #00c6ff, #ff8a00);
+  background-clip: padding-box;
+  box-shadow: 0 0 15px rgba(0, 198, 255, 0.6), 0 0 30px rgba(255, 138, 0, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.user-info-card img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(0, 198, 255, 0.8), 0 0 35px rgba(255, 138, 0, 0.8);
+}
+
+/* Headers Styling */
+h3 {
+  font-size: 1.6em;
+  color: #00d9ff;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/* Progress Bar */
+.progress-bar {
+  background: #292929;
+  height: 12px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.progress-bar div {
+  background: linear-gradient(90deg, #00c6ff, #ff8a00);
+  height: 100%;
+  border-radius: 8px;
+  transition: width 0.5s ease-in-out;
+}
+
+/* Tasks and Messages Lists */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  font-size: 1.1em;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+li:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-5px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dashboard {
+      grid-template-columns: 1fr;
+      padding: 20px;
+  }
+
+  .user-info-card,
+  .statistics-card,
+  .messages-card,
+  .task-tracker-card,
+  .activity-logs-card {
+      padding: 20px;
+  }
+}
